@@ -57,7 +57,8 @@
       var span = document.createElement("span");
       var caret = document.createElement("span");
       caret.className = "moe-bio-caret"; caret.textContent = "▋";
-      el.appendChild(span); el.appendChild(caret);
+      el.appendChild(caret);
+      el.appendChild(span);
       var i = 0, dir = 1;
       function tick(){
         if(!document.body.contains(el)) return;   /* Pjax 切页后旧元素已移除，自停 */

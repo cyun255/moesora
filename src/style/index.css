@@ -109,7 +109,7 @@ html.dark .moe-icon-moon{display:block}
 .moe-profile-avatar{width:80px;height:80px;border-radius:50%;object-fit:cover;
   border:3px solid var(--moe-theme);padding:2px;background:var(--moe-bg)}
 .moe-profile-name{margin:12px 0 4px;font-size:18px}
-.moe-profile-bio{margin:0;font-size:13px;color:var(--moe-muted)}
+.moe-profile-bio{margin:0;font-size:13px;color:var(--moe-muted);overflow:hidden;white-space:nowrap;text-overflow:ellipsis;direction:rtl}
 .moe-profile-stats{display:flex;justify-content:space-around;margin-top:14px;
   padding-top:14px;border-top:1px dashed var(--moe-border)}
 .moe-stat{display:flex;flex-direction:column;font-size:12px;color:var(--moe-muted)}
