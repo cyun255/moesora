@@ -448,6 +448,7 @@ html{scrollbar-width:thin;scrollbar-color:var(--moe-theme) transparent}
 .moe-footer-beian a{color:var(--moe-muted)}
 .moe-footer-beian a:hover{color:var(--moe-theme);text-decoration:none}
 .moe-footer-police{display:inline-flex;align-items:center;gap:5px}
+.moe-footer-moe-icp{display:inline-flex;align-items:center;gap:5px}
 
 /* 终端打字机签名 */
 .moe-hero-sub.moe-typed{display:inline-flex;align-items:center;gap:6px;font-family:"SFMono-Regular",ui-monospace,Consolas,"Cascadia Code","Liberation Mono",Menlo,monospace;font-size:15px;letter-spacing:.3px;background:rgba(20,20,30,.28);padding:7px 16px;border-radius:8px;min-height:1.6em}

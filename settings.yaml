@@ -190,14 +190,23 @@ spec:
             - { label: "Androidstudio（深）", value: "androidstudio" }
             - { label: "Agate（深）", value: "agate" }
             - { label: "StackOverflow Dark（深）", value: "stackoverflow-dark" }
-            - { label: "StackOverflow Light（浅）", value: "stackoverflow-light" }
+            - {
+                label: "StackOverflow Light（浅）",
+                value: "stackoverflow-light",
+              }
             - { label: "VS（浅）", value: "vs" }
             - { label: "Xcode（浅）", value: "xcode" }
             - { label: "Idea（浅）", value: "idea" }
             - { label: "Solarized Dark（深）", value: "base16/solarized-dark" }
-            - { label: "Solarized Light（浅）", value: "base16/solarized-light" }
+            - {
+                label: "Solarized Light（浅）",
+                value: "base16/solarized-light",
+              }
             - { label: "Kimbie Dark（深）", value: "kimbie-dark" }
-            - { label: "Tomorrow Night Blue（深）", value: "tomorrow-night-blue" }
+            - {
+                label: "Tomorrow Night Blue（深）",
+                value: "tomorrow-night-blue",
+              }
         - $formkit: select
           name: enable_katex
           label: KaTeX 数学公式
@@ -644,6 +653,10 @@ spec:
           name: police_code
           label: 公安备案-编号(纯数字)
           help: "公安备案号里的纯数字部分，用于生成查询跳转链接"
+        - $formkit: text
+          name: moe_icp
+          label: 萌ICP备-编号(纯数字)
+          help: "如 2024XXXX，页脚自动显示为「萌ICP备2024XXXX号」；留空不显示；点击跳转 icp.gov.moe 查询"
         - $formkit: text
           name: powered_name
           label: 页脚 Powered by 文字

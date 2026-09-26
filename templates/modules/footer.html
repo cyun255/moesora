@@ -14,7 +14,8 @@
 
     <p class="moe-footer-beian"
        th:if="${(theme.config.footer?.icp != null and theme.config.footer?.icp != '')
-                or (theme.config.footer?.police_text != null and theme.config.footer?.police_text != '')}">
+                or (theme.config.footer?.police_text != null and theme.config.footer?.police_text != '')
+                or (theme.config.footer?.moe_icp != null and theme.config.footer?.moe_icp != '')}">
       <a th:if="${theme.config.footer?.icp != null and theme.config.footer?.icp != ''}"
          href="https://beian.miit.gov.cn/" target="_blank" rel="noopener"
          th:text="${theme.config.footer.icp}">ICP备XXXXXXXX号</a>
@@ -23,6 +24,11 @@
          th:href="'https://beian.mps.gov.cn/#/query/webSearch?code=' + ${theme.config.footer?.police_code}">
         <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 8.5 8 11 4.6-2.5 8-6 8-11V5z"/></svg>
         <span th:text="${theme.config.footer.police_text}">公网安备XXXXXXXX号</span>
+      </a>
+      <a th:if="${theme.config.footer?.moe_icp != null and theme.config.footer?.moe_icp != ''}"
+         class="moe-footer-moe-icp" target="_blank" rel="noopener"
+         th:href="'https://icp.gov.moe/?keyword=' + ${theme.config.footer.moe_icp}">
+        <span th:text="'萌ICP备' + ${theme.config.footer.moe_icp} + '号'">萌ICP备XXXXXXXX号</span>
       </a>
     </p>
 
