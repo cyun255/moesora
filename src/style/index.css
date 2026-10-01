@@ -798,7 +798,7 @@ html.moe-no-anim .moe-article-hero:hover .moe-article-title::after{width:42px}
   transition:color .2s,padding .2s}
 .moe-cat-list>li:last-child>a{border-bottom:none}
 .moe-cat-list a:hover{color:var(--moe-theme);padding-left:6px;text-decoration:none}
-.moe-cat-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.moe-cat-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:14px}
 .moe-cat-count{flex:none;background:var(--moe-bg-2);color:var(--moe-muted);border-radius:8px;
   padding:1px 11px;font-size:12px;line-height:1.7;transition:.2s}
 .moe-cat-list a:hover .moe-cat-count{background:var(--moe-theme);color:#fff}

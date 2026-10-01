@@ -332,6 +332,7 @@ spec:
                 - { label: "关于", value: "about" }
                 - { label: "友链", value: "links" }
                 - { label: "最近文章", value: "recent" }
+                - { label: "热门文章", value: "popular" }
                 - { label: "分类", value: "categories" }
                 - { label: "标签云", value: "tags" }
                 - { label: "时间天气", value: "weather" }
@@ -359,6 +360,7 @@ spec:
                 - { label: "关于", value: "about" }
                 - { label: "友链", value: "links" }
                 - { label: "最近文章", value: "recent" }
+                - { label: "热门文章", value: "popular" }
                 - { label: "分类", value: "categories" }
                 - { label: "标签云", value: "tags" }
                 - { label: "时间天气", value: "weather" }
@@ -382,6 +384,7 @@ spec:
                 - { label: "关于", value: "about" }
                 - { label: "友链", value: "links" }
                 - { label: "最近文章", value: "recent" }
+                - { label: "热门文章", value: "popular" }
                 - { label: "分类", value: "categories" }
                 - { label: "标签云", value: "tags" }
                 - { label: "时间天气", value: "weather" }
@@ -453,6 +456,11 @@ spec:
         - $formkit: number
           name: recent_posts_count
           label: 最近文章-显示数量
+          value: 5
+        - $formkit: number
+          name: popular_posts_count
+          label: 热门文章-显示数量
+          help: 「热门文章」按浏览量从高到低展示前 N 篇（浏览量由 Halo 自动统计，没被访问过的文章计 0）。该模块用到 Halo 2.19.0 起才提供的文章查询能力，低于此版本请勿启用。
           value: 5
         - $formkit: number
           name: category_count

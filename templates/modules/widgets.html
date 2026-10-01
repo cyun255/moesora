@@ -149,6 +149,27 @@
     </ul>
   </section>
 
+  <!-- 热门文章：按浏览量降序（stats.visit 由 Halo 的访问量统计写入，没被访问过的文章计 0）。
+       每行右侧用「标题 + 计数徽章」的现成样式（.moe-cat-* 系列，与侧栏「分类」卡同一套），所以行内布局无需新增 CSS；
+       列表上的 moe-popular 不带内置样式，只作为后台自定义 CSS 单独定制热门列表的钩子。
+       注意：这里的 list({...}) 统一参数查询需要 Halo 2.19.0+，且 sort 字段必须真实存在（写错的字段会让页面报错）。 -->
+  <section th:case="'popular'" class="moe-card"
+           th:with="popular=${postFinder.list({page: 1,
+                                              size: (theme.config.sidebar?.popular_posts_count ?: 5),
+                                              sort: {'stats.visit,desc'}})}">
+    <h4 class="moe-card-title"><span class="moe-title-ico"><th:block th:replace="~{modules/icons :: icon('flame')}"></th:block></span>热门文章</h4>
+    <ul class="moe-cat-list moe-popular">
+      <li th:each="p : ${popular.items}">
+        <a th:href="${p.status.permalink}">
+          <span class="moe-cat-name" th:text="${p.spec.title}">标题</span>
+          <span class="moe-cat-count" th:title="|浏览量 ${p.stats?.visit ?: 0}|"
+                th:text="${p.stats?.visit ?: 0}">0</span>
+        </a>
+      </li>
+      <li th:if="${popular.items.isEmpty()}" class="moe-muted-text">还没有文章</li>
+    </ul>
+  </section>
+
   <!-- 分类 -->
   <th:block th:case="'categories'" th:with="catList=${categoryFinder.list(1, theme.config.sidebar?.category_count ?: 8).items}">
     <section class="moe-card moe-cat-card" th:if="${catList != null and !catList.isEmpty()}">
